@@ -17,6 +17,10 @@ A key feature of the project is the iterative process in four phases.
 
 This research examines nurses' salaries in Ireland compared to those in various countries, including Australia, Canada, the USA, and several European nations. The study factors in GDP, cost of living, exchange rates, and other variables to understand salary differences. In 2022, Ireland's average nurse salary was $64,000, ranking third among the countries studied. The paper also explores the evolving role of nurses in healthcare and highlights disparities in compensation despite their crucial role in patient care. The aim is to provide insights for nurses to make informed career decisions. The project follows the Waterfall model for structured project management and uses the Knowledge Discovery in Databases (KDD) framework for data analysis, with Jupyter Local chosen as the development environment.
 
+Here is a Datafolio (Poster) report of the research process and takeaways:
+
+![image.png](./Presentation_Poster.jpg)
+
 ### Goals
 
 The aim of this project is to establish a model of a complete software development cycle applied to a simple research project. This is the Capstone Project for the Master in Data Analytics of the University of Dublin.
@@ -57,7 +61,7 @@ Key Data Findings and Dataset Issues:
 - Missing Data: Some professions, years, and countries have missing data, leading to incomplete analysis.
 - Heteroscedasticity: The dataset exhibits non-homogeneous variance, complicating statistical analysis.
 
-Exploratory Data Analysis (EDA):
+#### Exploratory Data Analysis (EDA):
 
 - Nurse Salaries: Nurse salaries vary widely due to factors such as experience, education, employment type, and country.
 - Regional Variations: Richer countries typically offer higher salaries, with a positive correlation between salary and GDP. Nurses in some developing countries (e.g., Latin America) earn relatively higher wages compared to the general population.
@@ -66,41 +70,7 @@ Exploratory Data Analysis (EDA):
 - Education & Experience: Nurses with more advanced qualifications (specialists) and self-employed nurses earn significantly more. Specialist nurses earn about 100% more than hospital nurses.
 - Comparison to Other Healthcare Professionals: Hospital nurses earn about 1.2 times the national average, while general practitioners earn 2.5 times, and specialists earn 5.2 times the average salary.
 
-Correlation and Statistical Analysis:
-
-- Correlations: Many numerical variables, especially salaries and GDP, are correlated. However, deeper correlation analysis is limited due to the dataset's nature.
-- Non-Parametric Tests: Since the dataset does not meet the assumptions for traditional statistical tests, non-parametric tests (Wilcoxon, Kruskal-Wallis) were used to confirm graphical trends.
-
-Machine Learning Algorithms:
-
-Several machine learning models were suggested for addressing analytical challenges:
-
-- Income Prediction: Using linear regression, decision trees, and random forests to predict income based on variables like profession, country, and year.
-- Country Classification: Classifying countries based on economic indicators and wages using methods like logistic regression, k-NN, and SVM.
-- Outlier Detection: Using algorithms like Isolation Forest to identify outliers.
-- Time Series Forecasting: Predicting trends in nurse salaries using ARIMA or Prophet.
-- Cluster Analysis: Grouping countries or individuals based on income and economic indicators using clustering algorithms.
-
-Key Outcomes:
-
-- Salary Differences Across Countries: Significant global salary variations are influenced by economic conditions, health policies, and the valuation of nursing as a profession.
-- Salaries in Developed Countries: Nurses in developed nations tend to earn higher salaries, though some developing countries offer competitive wages.
-- Experience and Qualifications: Most countries reward experience and qualifications with higher pay, aiming to retain skilled nurses.
-- Demand-Driven Salaries: Countries with nursing shortages offer higher salaries to attract and retain nurses.
-- Economic Disparities: Developing countries struggle to offer competitive wages, leading to nurse migration to wealthier nations.
-- Cost of Living: The cost of living influences salary levels, requiring higher pay in areas with a higher cost of living.
-- Cultural Valuation of Nursing: Countries with a higher social value for nursing tend to offer better compensation.
-- Unionization: Strong nursing unions help negotiate better pay and benefits for nurses.
-
-Discussion:
-
-The report identifies several factors influencing nurse salaries, such as specialization, demand, experience, and location. Specialist nurses with advanced training and more responsibilities earn higher wages. Countries facing nursing shortages or with strong unions tend to offer better compensation. Addressing salary disparities is vital to improving recruitment, retention, and job satisfaction in the nursing profession, ensuring a robust healthcare workforce globally.
-
-Here is a Datafolio (Poster) report of the research process and takeaways:
-
-![image.png](./Presentation_Poster.jpg)
-
-### Plots 1 to 5
+##### Plots 1 to 5
 
 How does different measurement methodologies, GDP ranking affect salaries of different professions.
 Salaries are shown in these units:
@@ -121,23 +91,53 @@ Salaries are shown in these units:
 
 ![image.png](./Facetgrid5.png)
 
-### Plots 6
+#### Correlation and Statistical Analysis:
+
+- Correlations: Many numerical variables, especially salaries and GDP, are correlated. However, deeper correlation analysis is limited due to the dataset's nature.
+- Non-Parametric Tests: Since the dataset does not meet the assumptions for traditional statistical tests, non-parametric tests (Wilcoxon, Kruskal-Wallis) were used to confirm graphical trends.
+
+Machine Learning Algorithms:
+
+Several machine learning models were suggested for addressing analytical challenges:
+
+- Income Prediction: Using linear regression, decision trees, and random forests to predict income based on variables like profession, country, and year.
+- Country Classification: Classifying countries based on economic indicators and wages using methods like logistic regression, k-NN, and SVM.
+- Outlier Detection: Using algorithms like Isolation Forest to identify outliers.
+- Time Series Forecasting: Predicting trends in nurse salaries using ARIMA or Prophet.
+- Cluster Analysis: Grouping countries or individuals based on income and economic indicators using clustering algorithms.
+
+##### Plots 6
 
 How have adjusted and standardized salaries varied over time?
 
 ![image.png](./Facetgrid6.png)
 
-### Plots 7
+#### Key Outcomes:
+
+- Salary Differences Across Countries: Significant global salary variations are influenced by economic conditions, health policies, and the valuation of nursing as a profession.
+- Salaries in Developed Countries: Nurses in developed nations tend to earn higher salaries, though some developing countries offer competitive wages.
+- Experience and Qualifications: Most countries reward experience and qualifications with higher pay, aiming to retain skilled nurses.
+- Demand-Driven Salaries: Countries with nursing shortages offer higher salaries to attract and retain nurses.
+- Economic Disparities: Developing countries struggle to offer competitive wages, leading to nurse migration to wealthier nations.
+- Cost of Living: The cost of living influences salary levels, requiring higher pay in areas with a higher cost of living.
+- Cultural Valuation of Nursing: Countries with a higher social value for nursing tend to offer better compensation.
+- Unionization: Strong nursing unions help negotiate better pay and benefits for nurses.
+
+##### Plots 7
 
 How are adjusted for PPP salaries compared among professions?
 
 ![image.png](./Boxplots.png)
 
-### Plots 8
+##### Plots 8
 
 How are adjusted salaries compared to average salary of the country among professions?
 
 ![image.png](./Boxplots_2.png)
+
+#### Discussion:
+
+The report identifies several factors influencing nurse salaries, such as specialization, demand, experience, and location. Specialist nurses with advanced training and more responsibilities earn higher wages. Countries facing nursing shortages or with strong unions tend to offer better compensation. Addressing salary disparities is vital to improving recruitment, retention, and job satisfaction in the nursing profession, ensuring a robust healthcare workforce globally.
 
 ## Usage
 
