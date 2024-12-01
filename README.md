@@ -1,6 +1,23 @@
-# Nuese Salaries Project
+# Nurse Salaries Project
+
+This research project aims to analyze the salaries of nurses in different countries before and after the pandemic. It aims to create an analytics tool to processes various datasets, generates reports, and visualizes the data trends to help HR teams make data-driven decisions about healthcare employment.
+
+This project is important for making it visible the disparities in the compensation for healthcare workers, even trhough a worldwide crisis as the pandemic. It helps to visualize the trends in order to support the discussion about rising pay.
+
+A key feature of the project is the iterative process in four phases.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
+
+This research examines nurses' salaries in Ireland compared to those in various countries, including Australia, Canada, the USA, and several European nations. The study factors in GDP, cost of living, exchange rates, and other variables to understand salary differences. In 2022, Ireland's average nurse salary was $64,000, ranking third among the countries studied. The paper also explores the evolving role of nurses in healthcare and highlights disparities in compensation despite their crucial role in patient care. The aim is to provide insights for nurses to make informed career decisions. The project follows the Waterfall model for structured project management and uses the Knowledge Discovery in Databases (KDD) framework for data analysis, with Jupyter Local chosen as the development environment.
+
+### Goals
 
 The aim of this project is to establish a model of a complete software development cycle applied to a simple research project. This is the Capstone Project for the Master in Data Analytics of the University of Dublin.
 
@@ -17,62 +34,195 @@ This Git version controlled repository includes the notebooks that describe the 
 
 The complete datasets used were available publicly and without any license, from the OCDE website.
 
-## Problem:
+### Problem:
 
 The particular problem of choice is: "What are the characteristics of the salaries of nurses in the countries od the European Union, in particular in Ireland, from the data publicly available?". This project started during 2023 running experiments to gather data, transform it and test if it was feasible to answer business questions with it.
 
+The initial idea was to build a data analysis tool that calculates and visualizes healthcare salary trends by processing datasets from different developed countries, generating reports, and applying statistics techniques and Purchasing Power Parity and cost of living adjustments to correct salary values. By accounting for economic factors, it provides a more accurate, less biased picture of salary changes over time and across a wide geography.
+
 Then, after a lenghty analysis of the datasets, there were defined new descriptive variables in a **Feature Engineering** process that involved domain knowledge from the nursing field to generate new descriptors and classifiers. Using that information, a **Clustering Model** for countries were developed. And finally, many different **Machine Learning algorithms** were implmented using those new features in order to try to answer more difficult questions.
 
-## Users, audience and Technology
+### Analysis
 
-This project is public. This project is intended for the use of the developers and academic purposes for the program.
+This report explores nurse salaries across 39 countries, using data from the OECD. The dataset, presented in XML format, lacked a dictionary and required research to interpret various variables and ranges. Assumptions were made regarding the dataset's source (OECD), consistency, and data privacy.
+Key Data Findings and Dataset Issues:
 
-It is also expected that the user is familiarized with programing, executing and debugging Data Analytics tasks, like data cleaning, data wrangling and statistical description of the data. Libraries used include Pandas, Scikit-learn, NLTK, Plot.ly, Seaborn, among others.
+- Missing Data: The dataset is incomplete, with missing values for self-employed nurses and some countries, years, and professions.
+- Currency and Conversion: Salaries, reported in different currencies, were converted to USD and adjusted for inflation and purchasing power parity (PPP).
+- Data Augmentation: Incomplete data was interpolated, and outliers were retained due to wide salary variation across countries.
+- Two Datasets Created:
+  - HEALTH_REAC_Interpolated.csv: Contains missing data with flags included.
+  - HEALTH_REAC_Augmented.csv: Cleaned and enriched data with necessary adjustments.
+- Methodological Inconsistencies: Flags indicate differences in data collection methods, complicating cross-country comparisons.
+- Missing Data: Some professions, years, and countries have missing data, leading to incomplete analysis.
+- Heteroscedasticity: The dataset exhibits non-homogeneous variance, complicating statistical analysis.
 
-Here is a Datafolio description of the process:
-![image.png](./static/images/Datafolio1.jpg)
+Exploratory Data Analysis (EDA):
 
-![image.png](./static/images/Datafolio2.jpg)
+- Nurse Salaries: Nurse salaries vary widely due to factors such as experience, education, employment type, and country.
+- Regional Variations: Richer countries typically offer higher salaries, with a positive correlation between salary and GDP. Nurses in some developing countries (e.g., Latin America) earn relatively higher wages compared to the general population.
+- Top-Paid Countries: Nurses in low-GDP countries may earn better than the national average. However, these disparities lessen when adjusted for PPP.
+- Salary Evolution: Hospital nurse salaries have stagnated over the last 12 years, while salaries for general practitioners and specialists fluctuate depending on the country.
+- Education & Experience: Nurses with more advanced qualifications (specialists) and self-employed nurses earn significantly more. Specialist nurses earn about 100% more than hospital nurses.
+- Comparison to Other Healthcare Professionals: Hospital nurses earn about 1.2 times the national average, while general practitioners earn 2.5 times, and specialists earn 5.2 times the average salary.
 
-## Goals
+Correlation and Statistical Analysis:
 
-The goals of this project are
+- Correlations: Many numerical variables, especially salaries and GDP, are correlated. However, deeper correlation analysis is limited due to the dataset's nature.
+- Non-Parametric Tests: Since the dataset does not meet the assumptions for traditional statistical tests, non-parametric tests (Wilcoxon, Kruskal-Wallis) were used to confirm graphical trends.
 
--
-- Provide a Dashboard to visualize the dataset.
+Machine Learning Algorithms:
 
-_Demo: Recommender System Proof of concept for Placetopay._
+Several machine learning models were suggested for addressing analytical challenges:
 
-You can check the resulting web page in [https://t67-ptp-recosystem.herokuapp.com/](https://t67-ptp-recosystem.herokuapp.com/) (page in English)
+- Income Prediction: Using linear regression, decision trees, and random forests to predict income based on variables like profession, country, and year.
+- Country Classification: Classifying countries based on economic indicators and wages using methods like logistic regression, k-NN, and SVM.
+- Outlier Detection: Using algorithms like Isolation Forest to identify outliers.
+- Time Series Forecasting: Predicting trends in nurse salaries using ARIMA or Prophet.
+- Cluster Analysis: Grouping countries or individuals based on income and economic indicators using clustering algorithms.
 
-## How to run this app (locally)
+Key Outcomes:
 
-(The following instructions apply to macOS/linux command line.)
+- Salary Differences Across Countries: Significant global salary variations are influenced by economic conditions, health policies, and the valuation of nursing as a profession.
+- Salaries in Developed Countries: Nurses in developed nations tend to earn higher salaries, though some developing countries offer competitive wages.
+- Experience and Qualifications: Most countries reward experience and qualifications with higher pay, aiming to retain skilled nurses.
+- Demand-Driven Salaries: Countries with nursing shortages offer higher salaries to attract and retain nurses.
+- Economic Disparities: Developing countries struggle to offer competitive wages, leading to nurse migration to wealthier nations.
+- Cost of Living: The cost of living influences salary levels, requiring higher pay in areas with a higher cost of living.
+- Cultural Valuation of Nursing: Countries with a higher social value for nursing tend to offer better compensation.
+- Unionization: Strong nursing unions help negotiate better pay and benefits for nurses.
 
-To run this app first clone repository and then open a terminal.
+Discussion:
+
+The report identifies several factors influencing nurse salaries, such as specialization, demand, experience, and location. Specialist nurses with advanced training and more responsibilities earn higher wages. Countries facing nursing shortages or with strong unions tend to offer better compensation. Addressing salary disparities is vital to improving recruitment, retention, and job satisfaction in the nursing profession, ensuring a robust healthcare workforce globally.
+
+Here is a Datafolio (Poster) report of the research process and takeaways:
+
+![image.png](./Presentation_Poster.jpg)
+
+### Plots 1 to 5
+
+How does different measurement methodologies, GDP ranking affect salaries of different professions.
+Salaries are shown in these units:
+
+- National Currency Units,
+- Adjusted to the price of the dollar at 2015.
+- Adjusted to Purchase parity prices
+- compared to the GDP per capita
+- compared to the average salary of the country.
+
+![image.png](./Facetgrid1.png)
+
+![image.png](./Facetgrid2.png)
+
+![image.png](./Facetgrid3.png)
+
+![image.png](./Facetgrid4.png)
+
+![image.png](./Facetgrid5.png)
+
+### Plots 6
+
+How have adjusted and standardized salaries varied over time?
+
+![image.png](./Facetgrid6.png)
+
+### Plots 7
+
+How are adjusted for PPP salaries compared among professions?
+
+![image.png](./Boxplots.png)
+
+### Plots 8
+
+How are adjusted salaries compared to average salary of the country among professions?
+
+![image.png](./Boxplots_2.png)
+
+## Usage
+
+**Audience and Technology:** This project is public. This project is intended for the use of the developers and academic purposes for the program.
+
+It is expected that the user is familiarized with Python programing, executing and debugging Data Analytics tasks, like data cleaning, data wrangling and statistical description of the data. Libraries used include Pandas, Scikit-learn, NLTK, Plot.ly, Seaborn, among others.
+
+You can check the file "
+
+In order to check the notebooks, the following recommended procedure is advised:
+
+<div style="margin-left: 40px;">
+
+### Option 1. Run the Notebooks on Google Colab (Recommended for Easy Access)
+
+To run the notebooks on Google Colab (no setup required locally), follow these steps:
+
+- Go to Google Colab.
+- Click on File > Open notebook.
+- Select the GitHub tab, and paste the URL of this repository into the search bar.
+- Select the notebook you want to explore.
+
+Now you can run the notebooks on Colab, interact with the datasets, and modify the code as needed.
+
+### Option 2: Download the files and explore them in your machine
+
+#### 1. Clone the Repository in your local machine
+
+If you do not want to use Colab, you can use your won installation of Jupyter Notebooks, and download all the files in your preferred location.
+
+To get started, you first need to download the project from GitHub. Open your terminal or Git Bash and run the following command:
 
 ```
-git clone https://github.com/edward0rtiz/team67-ptp.git
+git clone https://github.com/yourusername/repository-name.git
 ```
 
-Install the requirements:
-it is suggested that you use a virtual environment (virtualenv / Anaconda / docker image) where all the requirement packets will be stored.
+This will download the entire repository to your local machine.
+
+### 2. Set Up Your Local Environment (Optional)
+
+If you prefer to work locally, ensure you have Jupyter Notebook or JupyterLab installed on your machine. If not, you can install it using:
 
 ```
-pip install -r requirements.txt
+pip install notebook
 ```
 
-Run the app:
+After installation, navigate to the project folder and run:
 
 ```
-python3 app.py
+jupyter notebook
 ```
 
-You can run the app on your browser at http://127.0.0.1:8050
+This will open the Jupyter interface in your browser, where you can select and run the notebooks.
 
-## Screenshots
+### 3. Interact with the Datasets and Code
 
-![image.png](./static/images/PeekIntro.gif)
-![image.png](./static/images/PeekDescriptive 2.gif)
-![image.png](./static/images/PeekGeo2.gif)
-![image.png](./static/images/PeekRecommender.gif)
+Once the notebook is open, you can start executing the cells to explore the datasets and the statistical techniques used. You can also modify the code to experiment with different approaches or datasets. Colab provides a powerful environment with GPU support, so you can run computationally intensive tasks directly in the cloud.
+
+</div>
+
+## Contributing
+
+Feel free to fork this project for your own use.
+
+    - Please follow the Git workflow and then the Colab or Jupyter notebook setup.
+
+This project is no longer under development. so:
+
+    - Any bugs or issues will not be fixed or attended
+
+However, if you find that this project may improve in any way:
+
+    - Any "thanks" or encouragement to the developer will be welcomed
+    - Please be very kind and exhaustive in explaining and submitting pull requests.
+
+## License
+
+All rights reserved
+
+No Use Without Permission
+
+No Commercial Use
+
+Modification Prohibited
+
+Attribution must be made
+
+See the [LICENSE](LICENSE.md) file for details.
