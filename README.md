@@ -19,7 +19,36 @@ This research examines nurses' salaries in Ireland compared to those in various 
 
 Here is a Datafolio (Poster) report of the research process and takeaways:
 
-![image.png](./Presentation_Poster.jpg)
+![image.png](./images/Presentation_Poster.jpg)
+
+## Project Structure
+
+    /Nurse-Salaries-project
+    ├── Nurse Salaries - Project Final Report-1.pdf
+    ├── Annex 1. Data Science project management methodologies.pdf
+    ├── Annex 2 List of countries by GDp (nominal) - Wikipedia.pdf
+    ├── Annex 3  List_of_countries_by_GDP_(nominal)_per_capita.pdf
+    ├── Annex 4  List_of_countries_by_GDP_(PPP)_per_capita.pdf
+    ├── Annex 5_ Nurse Salaries - Project Plan.docx
+    ├── Annex 6_ Nurse salaries - Project Timeline.xlsx
+    ├── README.md           # Project documentation
+    ├── LICENSE.md          # Project licencing
+    ├── /data
+    │ ├── HEALTH_REAC_.csv             # Raw OECD dataset
+    │ ├── HEALTH_REAC_Interpolated.csv # Cleaned dataset
+    │ ├── HEALTH_REAC_Augmented.csv    # Enriched dataset
+    │ ├── HEALTH_REAC_Sorted.csv       # Same dataset, ordered by country GDP
+    │ ├── List of countries by GDP.csv # ordered list of countries, to sort data.
+    ├── /images
+    │ ├── Boxplots and Facetgrids plots
+    ├── /notebooks                     # JUPYTER Notebooks
+    │ ├── 1. Data Preparation - Nurse Salary Project.ipynb
+    │ ├── 2. Exploratory Data Analysis - Nurse Salary Project.ipynb
+    │ ├── 3. Statistical Analysis - Nurse Salary Project.ipynb
+    │ ├── 4. Machine Learning - Nurse Salary Project.ipynb
+    ├── /src
+    │ ├── preprocess.py     # Data preprocessing scripts
+    │ ├── requirements.txt    # Python dependencies
 
 ### Goals
 
@@ -81,15 +110,15 @@ Salaries are shown in these units:
 - compared to the GDP per capita
 - compared to the average salary of the country.
 
-![image.png](./Facetgrid1.png)
+![image.png](./images/Facetgrid1.png)
 
-![image.png](./Facetgrid2.png)
+![image.png](./images/Facetgrid2.png)
 
-![image.png](./Facetgrid3.png)
+![image.png](./images/Facetgrid3.png)
 
-![image.png](./Facetgrid4.png)
+![image.png](./images/Facetgrid4.png)
 
-![image.png](./Facetgrid5.png)
+![image.png](./images/Facetgrid5.png)
 
 #### Correlation and Statistical Analysis:
 
@@ -110,7 +139,7 @@ Several machine learning models were suggested for addressing analytical challen
 
 How have adjusted and standardized salaries varied over time?
 
-![image.png](./Facetgrid6.png)
+![image.png](./images/Facetgrid6.png)
 
 #### Key Outcomes:
 
@@ -127,13 +156,13 @@ How have adjusted and standardized salaries varied over time?
 
 How are adjusted for PPP salaries compared among professions?
 
-![image.png](./Boxplots.png)
+![image.png](./images/Boxplots.png)
 
 ##### Plots 8
 
 How are adjusted salaries compared to average salary of the country among professions?
 
-![image.png](./Boxplots_2.png)
+![image.png](./images/Boxplots_2.png)
 
 #### Discussion:
 
