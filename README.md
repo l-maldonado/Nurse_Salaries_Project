@@ -24,31 +24,31 @@ Here is a Datafolio (Poster) report of the research process and takeaways:
 ## Project Structure
 
     /Nurse-Salaries-project
-    ├── Nurse Salaries - Project Final Report-1.pdf
+    ├── /data
+    │ ├── HEALTH_REAC_.csv              # Raw OECD dataset
+    │ ├── HEALTH_REAC_Interpolated.csv  # Cleaned dataset
+    │ ├── HEALTH_REAC_Augmented.csv     # Enriched dataset
+    │ ├── HEALTH_REAC_Sorted.csv        # Same dataset, ordered by country GDP
+    │ ├── List of countries by GDP.csv  # ordered list of countries, to sort data.
+    ├── /images
+    │ ├── Boxplots and Facetgrids plots
+    ├── /notebooks                      # JUPYTER Notebooks
+    │ ├── 1. Data Preparation - Nurse Salary Project.ipynb
+    │ ├── 2. Exploratory Data Analysis - Nurse Salary Project.ipynb
+    │ ├── 3. Statistical Analysis - Nurse Salary Project.ipynb
+    │ ├── 4. Machine Learning - Nurse Salary Project.ipynb
+    ├── /src
+    │ ├── preprocess.py                 # Data preprocessing scripts
+    ├── FINAL REPORT - Nurse Salaries Project.pdf
     ├── Annex 1. Data Science project management methodologies.pdf
     ├── Annex 2 List of countries by GDp (nominal) - Wikipedia.pdf
     ├── Annex 3  List_of_countries_by_GDP_(nominal)_per_capita.pdf
     ├── Annex 4  List_of_countries_by_GDP_(PPP)_per_capita.pdf
     ├── Annex 5_ Nurse Salaries - Project Plan.docx
     ├── Annex 6_ Nurse salaries - Project Timeline.xlsx
-    ├── README.md           # Project documentation
-    ├── LICENSE.md          # Project licencing
-    ├── /data
-    │ ├── HEALTH_REAC_.csv             # Raw OECD dataset
-    │ ├── HEALTH_REAC_Interpolated.csv # Cleaned dataset
-    │ ├── HEALTH_REAC_Augmented.csv    # Enriched dataset
-    │ ├── HEALTH_REAC_Sorted.csv       # Same dataset, ordered by country GDP
-    │ ├── List of countries by GDP.csv # ordered list of countries, to sort data.
-    ├── /images
-    │ ├── Boxplots and Facetgrids plots
-    ├── /notebooks                     # JUPYTER Notebooks
-    │ ├── 1. Data Preparation - Nurse Salary Project.ipynb
-    │ ├── 2. Exploratory Data Analysis - Nurse Salary Project.ipynb
-    │ ├── 3. Statistical Analysis - Nurse Salary Project.ipynb
-    │ ├── 4. Machine Learning - Nurse Salary Project.ipynb
-    ├── /src
-    │ ├── preprocess.py     # Data preprocessing scripts
-    │ ├── requirements.txt    # Python dependencies
+    ├── README.md                       # Project documentation
+    ├── requirements.txt                # Python dependencies
+    ├── LICENSE.md                      # Project licencing
 
 ### Goals
 
