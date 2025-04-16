@@ -11,7 +11,11 @@ The public repository of this project is available [Here](https://github.com/l-m
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Structure](#Structure)
+- [Structure](#structure)
+- [Goals](#goals)
+- [Problem](#problem)
+- [Analysis](#analysis)
+- [Discussion](#discussion)
 - [License](#license)
 
 ## Introduction
@@ -68,7 +72,7 @@ This Git version controlled repository includes the notebooks that describe the 
 
 The complete datasets used were available publicly and without any license, from the OCDE website.
 
-### Problem:
+### Problem
 
 The particular problem of choice is: "What are the characteristics of the salaries of nurses in the countries od the European Union, in particular in Ireland, from the data publicly available?". This project started during 2023 running experiments to gather data, transform it and test if it was feasible to answer business questions with it.
 
